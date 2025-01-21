@@ -1,0 +1,37 @@
+function Calculator(a, b) {
+    this.a = a;
+    this.b = b;
+
+    this.sum = function () {
+        return this.a + this.b;
+    };
+
+    this.sub = function () {
+        return this.a - this.b;
+    };
+
+    this.mul = function () {
+        return this.a * this.b;
+    };
+
+    this.div = function () {
+        if (this.b !== 0) {
+            return this.a / this.b;
+        } else {
+            return "Division by zero is not allowed!";
+        }
+    };
+}
+let a = parseFloat(prompt("Enter the first number:"));
+let b = parseFloat(prompt("Enter the second number:"));
+
+let calculator = new Calculator(a, b);
+console.log("Sum: " + calculator.sum());
+console.log("Subtraction: " + calculator.sub());
+console.log("Multiplication: " + calculator.mul());
+console.log("Division: " + calculator.div());
+
+alert("sum=" + calculator.sum(a,b));
+alert("sub=" + calculator.sub(a,b));
+alert("mul=" + calculator.mul(a,b));
+alert("div=" + calculator.div(a,b));

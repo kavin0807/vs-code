@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="sample.js"></script>
+</head>
+<body>
+    <script>
+        let calculator={
+            sum:function(a,b){
+                return a+b;
+            },
+            sub:function(a,b){
+                return a-b;
+            },
+            mul:function(a,b){
+                return a*b;
+            },
+            div:function(a,b){
+                return a/b;
+            }
+        };
+        let a=prompt("Enter the first number:");
+        let b=prompt("Enter the Second number:");
+        a=parseInt(a);
+        b=parseInt(b);
+    console.log("Sum: " + calculator.sum(a, b));
+    console.log("Subtraction: " + calculator.sub(a, b));
+    console.log("Multiplication: " + calculator.mul(a, b));
+    console.log("Division: " + calculator.div(a, b));
+    
+    alert("sum=" + calculator.sum(a,b));
+    alert("sub=" + calculator.sub(a,b));
+    alert("mul=" + calculator.mul(a,b));
+    alert("div=" + calculator.div(a,b));
+
+    </script>
+</body>
+</html>
